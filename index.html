@@ -12,27 +12,31 @@
     <div class="main">
         <h1>Calc - u - <i>l8r</i></h1>
         <div class="container" id="#container">
-            <div id="display"> 0 </div>
+            <div id="display"> 
+                    <div class="previous-number"></div>
+                    <div class="previous-operand"></div>
+                    <div class="current-number">0</div>
+            </div>
             <div id="buttons">
-                <div class="button-number" id="nine">9</div>
-                <div class="button-number" id="eight">8</div>
-                <div class="button-number" id="seven">7</div>
-                <div class="button-operate" id="add">+</div>
+                <div class="button-number" id="nine" onclick="numberPress(event)">9</div>
+                <div class="button-number" id="eight" onclick="numberPress(event)">8</div>
+                <div class="button-number" id="seven" onclick="numberPress(event)">7</div>
+                <div class="button-operate" id="add" onclick="operandPress(event)">+</div>
 
-                <div class="button-number" id="six">6</div>
-                <div class="button-number" id="five">5</div>
-                <div class="button-number" id="four">4</div>
-                <div class="button-operate" id="subtract">-</div>
+                <div class="button-number" id="six" onclick="numberPress(event)">6</div>
+                <div class="button-number" id="five" onclick="numberPress(event)">5</div>
+                <div class="button-number" id="four" onclick="numberPress(event)">4</div>
+                <div class="button-operate" id="subtract" onclick="operandPress(event)">-</div>
 
-                <div class="button-number" id="three">3</div>
-                <div class="button-number" id="two">2</div>
-                <div class="button-number" id="one">1</div>
-                <div class="button-operate" id="multiply">x</div>
+                <div class="button-number" id="three" onclick="numberPress(event)">3</div>
+                <div class="button-number" id="two" onclick="numberPress(event)">2</div>
+                <div class="button-number" id="one" onclick="numberPress(event)">1</div>
+                <div class="button-operate" id="multiply" onclick="operandPress(event)">x</div>
 
-                <div class="button-number" id="zero">0</div>
+                <div class="button-number" id="zero" onclick="numberPress(event)">0</div>
                 <div class="button-operate" id="dot">.</div>
-                <div class="button-operate" id="equals">=</div>
-                <div class="button-operate" id="divide">/</div>
+                <div class="button-operate" id="equals" >=</div>
+                <div class="button-operate" id="divide" onclick="operandPress(event)">/</div>
             </div>
         </div>
     </div>

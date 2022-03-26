@@ -12,7 +12,7 @@
 }
 
 .main {
-    background-color: #d3d3d3;
+    background: linear-gradient(to right, #ED62D2, #0AAFFF);
     min-height: 100vh;
     min-width: 100vw;
     flex-direction: column;
@@ -44,6 +44,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+.previous-number, .previous-operand {
+    color:rgba(255, 255, 255, 0.6) !important;
 }
 
 #buttons {

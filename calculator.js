@@ -1,31 +1,30 @@
-const add = function(a, b) {
-	return a + b
-};
+// get variables from DOM
+const numberButtons = document.querySelectorAll('.button-number');
+const operationButtons = document.querySelectorAll('.button-operate');
+const equalsButton = document.querySelector('#equals');
+const previousNumberTextElement = document.querySelector('.previous-number');
+const operandTextElement = document.querySelector('.previous-operand');
+const currentNumberTextElement = document.querySelector('.current-number');
 
-const subtract = function(a, b) {
-	return a - b
-};
+//computational functions
+function add(a, b) { return a + b; }
+function subtract(a, b) { return a - b; }
+function sum(sumArray) { return sumArray.reduce(function (a, b) { return a + b; }, 0); }
+function multiply(multiplyArray) { return multiplyArray.reduce((a, b) => a * b); }
+function divide(divideArray) { return divideArray.reduce((a, b) => a / b); }
 
-const sum = function(sumArray) {
-	n = sumArray.reduce(function(a, b) { return a + b; }, 0);
-  return n;
-};
+// press functions
+function numberPress(e) {
+    let num = e.target.innerHTML;
+    let pushElement = currentNumberTextElement;
+    if (pushElement.innerHTML==0) {pushElement.textContent=num}
+    else { pushElement.textContent+=num; }
+}
 
-const multiply = function(multiplyArray) {
-  return multiplyArray.reduce( (a,b) => a * b );
-};
-
-const power = function(a,b) {
-	return Math.pow(a,b)
-};
-
-const factorial = function(num) {
-  var result = num;
-  if (num === 0 || num === 1) 
-    return 1; 
-  while (num > 1) { 
-    num--;
-    result *= num;
-  }
-  return result;
-};
+function operandPress(e) {
+    console.log((previousNumberTextElement.textContent==''));
+    let operand = e.target.innerHTML;
+    previousNumberTextElement.textContent = currentNumberTextElement.textContent;
+    operandTextElement.textContent = operand;
+    currentNumberTextElement.textContent = "0"
+}
